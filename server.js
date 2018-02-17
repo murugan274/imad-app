@@ -8,7 +8,7 @@ var articleone = {
     title: 'Article One | Murugan Mani',
     heading: 'Article One',
     date: 'Feb 18 2018',
-    Content: ` <p>
+    content: ` <p>
                     This is my first article. I would like to Tanmani Gopal the instructor for this wonderful opportunity.
                 </p>
             <p>
