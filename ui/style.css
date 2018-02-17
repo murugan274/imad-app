@@ -19,4 +19,11 @@ body {
 .img-medium {
     height: 200px;
 }
-
+.container {
+            max-width: 800;
+            color: Pink;
+            padding-top: 60;
+            margin-right: 100;
+            padding-left: 20px;
+            padding-right: 20;
+}
