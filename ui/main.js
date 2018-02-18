@@ -1,9 +1,11 @@
 console.log('Loaded!');
 // move the image
-var img = document.getElementById('madi'); 
+var img = document.getElementById('madi');
 var marginLeft =0;
-img.onclick = function() {
+function moveRight () {
     marginLeft = marginLeft + 10;
     img.style.marginLeft = MarginLeft + 'px';
+}
+img.onclick = function() {
   var interval = setInterval (moveRight, 100); 
 };
