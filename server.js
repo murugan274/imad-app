@@ -43,8 +43,7 @@ var htmlTemplate =`<html>
     <body>
         <Div Class="container">
         <div>
-            <a href="Home" >
-            </a>
+            <a href="/">Home</a>
         </div>  
         <hr/>
         <h1>
