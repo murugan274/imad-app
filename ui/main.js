@@ -1,11 +1,10 @@
 console.log('Loaded!');
+//change the text of main tesx of div
+var element = document.getElementById('main-text');
+element.innerHTML = 'New Value';
+
 // move the image
 var img = document.getElementById('madi');
-var marginLeft = 0;
-function moveRight () {
-    marginLeft = marginLeft + 10;
-    img.style.marginLeft = MarginLeft + 'px';
-}
-img.onclick = function() {
-  var interval = setInterval (moveRight, 100); 
+img.onclick = function () {
+  img.style.marginLeft = '100px';
 };
