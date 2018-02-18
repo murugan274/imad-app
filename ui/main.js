@@ -3,7 +3,7 @@ console.log('Loaded!');
 var img = document.getElementById('madi'); 
 var marginLeft =0;
 img.onclick = function() {
-    marginLeft = marginLeft + 1;
+    marginLeft = marginLeft + 10;
     img.style.marginLeft = MarginLeft + 'px';
-  var interval = setInterval (moveRight, 50); 
+  var interval = setInterval (moveRight, 100); 
 };
