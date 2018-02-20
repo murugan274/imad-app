@@ -1,17 +1,27 @@
 //counter code
 var button = document.getElementById('counter');
-var counter =0;
+
 button.onclick = function () {
     
-    //make are quest to the counter point
+    //create a request object
+    var request =  XMLHttpRequest();
     
     //capture the response and store int in a variable
-    
-    //Render the variable in the correct span
-    counter = counter +1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter.toString();
-}
+    request.onreadystatechange = function () {
+    if (request.readystate === XMLHttpRequest.Done) {
+        //take action
+        if (request.status === 200) {
+        var counter = request-responseText;
+        var span = document.getElementById('count');
+        span.innerHTML = counter.toString();
+        }
+    }
+    //not done yet
+};
+    //make the request
+    request.open('GET', 'http://muruganitec.itec.imad.hasura-app.io/counter', true);
+    request.send(null);
+};
 //console.log('Loaded!');
 //change the text of main tesx of div
 //var element = document.getElementById('main-text');
