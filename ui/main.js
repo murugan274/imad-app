@@ -19,7 +19,7 @@ button.onclick = function () {
     //not done yet
 };
     //make the request
-    request.open('GET', 'http://muruganitec.itec.imad.hasura-app.io/counter', true);
+    request.open('GET', 'http://muruganitec.imad.hasura-app.io/counter', true);
     request.send(null);
 };
 //console.log('Loaded!');
