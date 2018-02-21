@@ -34,11 +34,11 @@ submit.onclick = function () {
 //capture the list of name and render as a list
 var names = ['name1' , 'name2' , 'name3'];
 var list = '';
-for (var i=0; i,names.length; i++) {
+for (var i=0; i < names.length; i++) {
     list += '<li>' + names[i] + '</li>';
 }
 var ul = document.getElementById('namelist');
-ul.innerHTML= list;
+ul.innerHTML = list;
 };
 //console.log('Loaded!');
 //change the text of main tesx of div
