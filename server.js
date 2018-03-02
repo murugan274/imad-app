@@ -13,7 +13,30 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-
+var articles = { 
+'article-one' : {
+    title: 'Article One | Murugan Mani',
+    heading: 'Article One',
+    date: 'Feb 18 2018',
+    content: ` <p>
+                    This is my first article. I would like to Tanmani Gopal the instructor for this wonderful opportunity.
+                </p>
+            <p>
+                Great work.
+                </p>    `
+},
+'article-two' : {
+     title: 'Article Two | Murugan Mani',
+    heading: 'Article Two',
+    date: 'Feb 19 2018',
+    content: ` <p>
+                    This is my Second article. I would like to Tanmani Gopal the instructor for this wonderful opportunity.
+                </p>
+            <p>
+                Great work.
+                </p>    `
+}
+};
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
