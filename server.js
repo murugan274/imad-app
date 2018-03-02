@@ -1,10 +1,11 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool =require('pg').pool;
+var Pool = require('pg').Pool;
+
 var config = {
-    user: 'murugan.itec',
-    database: 'murugan.itec',
+    user: 'muruganitec',
+    database: 'muruganitec',
     host: 'db.imad.hasura-app.io',
     port: '5432',
     password: process.env.DB_PASSWORD
@@ -75,10 +76,10 @@ app.get('/', function (req, res) {
 });
 
 
-var pool = new pool(config);
+var Pool = new Pool(config);
 app.get('/test-db', function (req, res) {
     //make a select request
-    pool.query('SELECT * FROM testm', function(err, result) {
+    Pool.query('SELECT * FROM testm', function(err, result) {
         if (err) {
             res.status(500).send(err.toString());
     }        else {
