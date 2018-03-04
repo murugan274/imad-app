@@ -152,7 +152,7 @@ app.post('/create-user', function(req, res) {
 
 app.get('/check-login', function (req, res) {
     if (req.session && req.session.auth && req.session.auth.userid) {
-        req.send('you are logged in:' + req.session.auth.userid.toString());
+        res.send('you are logged in:' + req.session.auth.userid.toString());
     } else {
         res.send('you are not logged in');
     }
