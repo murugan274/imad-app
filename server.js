@@ -108,11 +108,11 @@ app.post('/create-user', function(req, res) {
             }
 });
 });
-app.post('/login', function (req, res) {
-var username = req.body.username;
+ app.post('/login', function (req, res) {
+   var username = req.body.username;
    var password = req.body.password;
    
-   Pool.query('SELECT * from "userm" username = $1', [username], function(err, result) {
+   Pool.query('SELECT * from "userm" WHERE username = $1', [username], function(err, result) {
         if (err) {
             res.status(500).send(err.toString());
     }        else {
@@ -122,6 +122,7 @@ var username = req.body.username;
         }
         else {
             //match the password
+            
             var dbString = result.rows[0].password;
             var salt = dbString.split('$')[2];
             var hashedPassword = hash(password, salt); //creating hash based on the password submitted and original salt
