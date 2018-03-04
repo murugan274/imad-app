@@ -129,6 +129,8 @@ app.post('/create-user', function(req, res) {
             if (hashedPassword === dbString)
             {
                 res.send('credentials are correct');
+                //set sessions
+                
             } else {
                     res.send(403).send('username/password is incorrect');
                }
