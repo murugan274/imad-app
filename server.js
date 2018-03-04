@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(session({
     secret: 'someRandomSecretValue',
     cookie: {maxAge: 1000 * 60 * 60 * 24 * 30 }
-})
+}));
 //var articles = { 
 //'article-one' : {
 //    title: 'Article One | Murugan Mani',
