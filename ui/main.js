@@ -54,7 +54,7 @@ submit.onclick = function () {
     console.log(password);
     request.open('POST', 'http://muruganitec.imad.hasura-app.io/login', true);
     request.setRequestHeader('content-Type', 'application/json');
-    request.send(JSON.stringify({username: usernam, password: password}));
+    request.send(JSON.stringify({username: username, password: password}));
 };
 // make a rquest to the server and send the name
 //    request.open('GET', 'http://muruganitec.imad.hasura-app.io/counter', true);
